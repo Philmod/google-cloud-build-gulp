@@ -1,0 +1,27 @@
+{
+  "name": "google-container-gulp",
+  "version": "0.0.1",
+  "description": "Example on how to use gulp with Google Cloud Container Builder",
+  "main": "server.js",
+  "scripts": {
+    "server": "node server.js",
+    "build": "./node_modules/.bin/gulp"
+  },
+  "license": "Apache-2",
+  "dependencies": {
+    "express": "^4.15.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-minify-html": "^1.0.6",
+    "gulp-uglify": "^2.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Philmod/google-container-gulp.git"
+  },
+  "author": "Philmod <philippe.modard@gmail.com>"
+}
