@@ -4,7 +4,7 @@
   "description": "Example on how to use gulp with Google Cloud Container Builder",
   "main": "server.js",
   "scripts": {
-    "server": "node server.js",
+    "start": "node server.js",
     "build": "gulp"
   },
   "license": "Apache-2",
