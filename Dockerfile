@@ -1,19 +1,16 @@
 FROM zzrot/alpine-node
 
-RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
-# Dev install for build.
-COPY package.json /usr/src/app/package.json
-RUN npm install
+# Dev install, build, production install, and clean.
 COPY . /usr/src/app
-RUN npm run build
-
-# Production modules only.
-RUN rm -rf node_modules
-ENV NODE_ENV production
-RUN npm install
+RUN npm install \
+ && npm run build \
+ && rm -rf node_modules \
+ && npm install \
+ && rm -rf ~/.npm
 
 EXPOSE 3000
-
+ENV NODE_ENV production
 CMD [ "npm", "start"]
+
