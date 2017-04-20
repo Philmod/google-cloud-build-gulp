@@ -15,7 +15,7 @@ COPY package.json /usr/src/app/package.json
 RUN npm install --production
 COPY . /usr/src/app
 
-COPY --from=0 /usr/src/app/dist /usr/src/app/
+COPY --from=0 /usr/src/app/dist/ /usr/src/app/dist/
 
 EXPOSE 3000
 
